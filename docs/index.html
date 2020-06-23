@@ -38,7 +38,6 @@ function testResults (form) {
 var alert_quiz_avg = "Your Average for all quizzes is: " + (all_quiz_sum/quizMarks.length).toFixed(2);
 var alert_quiz_best = "Your Average for your 8 best quizzes is: " + (best_quiz_sum/8).toFixed(2);
 var alert_cur_mark = "Your have currently achived: " + (((best_quiz_sum /100) * 8.75) + finalMark * 30).toFixed(2) + "% in the class";
-    alert (alert_quiz_avg + "\n" + alert_quiz_best + "\n" + alert_cur_mark);
 document.getElementById("Quiz Average").innerHTML = alert_quiz_avg;
 document.getElementById("Quiz Best").innerHTML = alert_quiz_best;
 document.getElementById("Current Mark in Class").innerHTML = alert_cur_mark;
