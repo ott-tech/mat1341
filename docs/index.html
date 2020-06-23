@@ -34,13 +34,67 @@ function testResults (form) {
   for(var i = 2 ; i < quizMarks.length; i++){
     best_quiz_sum += quizMarks[i];
   }
+var final_mark_pre = (((best_quiz_sum /100) * 8.75) + finalMark * 30).toFixed(2);
+var final_mark_gpa = null;
+var final_mark_let = null;
+
+if((final_mark_pre >= 90) && (final_mark_pre <= 100)){
+  final_mark_gpa = 10;
+  final_mark_let = "A+";
+}
+else if((final_mark_pre >= 85) && (final_mark_pre < 90)){
+  final_mark_gpa = 9;
+  final_mark_let = "A";
+}
+else if((final_mark_pre >= 80) && (final_mark_pre < 85)){
+  final_mark_gpa = 8;
+  final_mark_let = "A-";
+}
+else if((final_mark_pre >= 75) && (final_mark_pre < 80)){
+  final_mark_gpa = 7;
+  final_mark_let = "B+";
+}
+else if((final_mark_pre >= 70) && (final_mark_pre < 75)){
+  final_mark_gpa = 6;
+  final_mark_let = "B";
+}
+else if((final_mark_pre >= 65) && (final_mark_pre < 70)){
+  final_mark_gpa = 5;
+  final_mark_let = "C+";
+}
+else if((final_mark_pre >= 60) && (final_mark_pre < 65)){
+  final_mark_gpa = 4;
+  final_mark_let = "C";
+}
+else if((final_mark_pre >= 55) && (final_mark_pre < 60)){
+  final_mark_gpa = 3;
+  final_mark_let = "D+";
+}
+else if((final_mark_pre >= 50) && (final_mark_pre < 55)){
+  final_mark_gpa = 2;
+  final_mark_let = "D";
+}
+else if((final_mark_pre >= 40) && (final_mark_pre < 50)){
+  final_mark_gpa = 1;
+  final_mark_let = "E";
+}
+else if((final_mark_pre >= 0) && (final_mark_pre < 50)){
+  final_mark_gpa = 0;
+  final_mark_let = "F";
+}
 
 var alert_quiz_avg = "Your Average for all quizzes is: " + (all_quiz_sum/quizMarks.length).toFixed(2);
 var alert_quiz_best = "Your Average for your 8 best quizzes is: " + (best_quiz_sum/8).toFixed(2);
-var alert_cur_mark = "Your have currently achived: " + (((best_quiz_sum /100) * 8.75) + finalMark * 30).toFixed(2) + "% in the class";
+var alert_cur_mark = "Your have currently achived: " + final_mark_pre + "% in the class";
+var alert_cur_mark2 = "Numeric grade: " + final_mark_gpa + " Letter grade: " + final_mark_let;
+
+
+
+
 document.getElementById("Quiz Average").innerHTML = alert_quiz_avg;
 document.getElementById("Quiz Best").innerHTML = alert_quiz_best;
 document.getElementById("Current Mark in Class").innerHTML = alert_cur_mark;
+document.getElementById("Current Mark in Class2").innerHTML = alert_cur_mark2;
 }
 </SCRIPT>
 </HEAD>
@@ -119,6 +173,7 @@ document.getElementById("Current Mark in Class").innerHTML = alert_cur_mark;
 <p id="Quiz Average"></p>
 <p id="Quiz Best"></p>
 <p id="Current Mark in Class"></p>
+<p id="Current Mark in Class2"></p>
 <br><br>
 
 <p>Clicking the Calculate button will provide you with your average mark for the quizzes, Numbers with Decimal points may show up in red but they do still work.</p>
