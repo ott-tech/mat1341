@@ -30,7 +30,7 @@ function testResults (form) {
   }
 
   var best_quiz_sum = 0;
-  quizMarks.sort();
+  quizMarks = quizMarks.sort();
   for(var i = 0 ; i < quizMarks.length-2; i++){
     best_quiz_sum += quizMarks[i];
   }
