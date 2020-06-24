@@ -31,7 +31,7 @@ function testResults (form) {
 
   var best_quiz_sum = 0;
   quizMarks.sort();
-  for(var i = 2 ; i < quizMarks.length; i++){
+  for(var i = 0 ; i < quizMarks.length-2; i++){
     best_quiz_sum += quizMarks[i];
   }
 var final_mark_pre = (((best_quiz_sum /100) * 8.75) + finalMark * 30).toFixed(2);
