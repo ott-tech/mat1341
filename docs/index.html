@@ -28,12 +28,12 @@ function testResults (form) {
   for(var i = 0 ; i < quizMarks.length; i++){
     all_quiz_sum += quizMarks[i];
   }
-  console.log(quizMarks);
+  console.log("Top to bottom quiz mark %" + quizMarks);
   var best_quiz_sum = 0;
   quizMarks = quizMarks.sort(function(a, b) {
   return a - b;
 });
-  console.log(quizMarks);
+  console.log("Worst to best Marks %" +quizMarks);
 
   for(var i = 2 ; i < quizMarks.length; i++){
     best_quiz_sum += quizMarks[i];
