@@ -28,12 +28,12 @@ function testResults (form) {
   for(var i = 0 ; i < quizMarks.length; i++){
     all_quiz_sum += quizMarks[i];
   }
-  console.log("Top to bottom quiz mark %" + quizMarks);
+  console.log("Top to bottom quiz mark % " + quizMarks);
   var best_quiz_sum = 0;
   quizMarks = quizMarks.sort(function(a, b) {
   return a - b;
 });
-  console.log("Worst to best Marks %" +quizMarks);
+  console.log("Worst to best Marks % " +quizMarks);
 
   for(var i = 2 ; i < quizMarks.length; i++){
     best_quiz_sum += quizMarks[i];
@@ -96,9 +96,13 @@ var alert_cur_mark2 = "Numeric grade: " + final_mark_gpa + " Letter grade: " + f
 
 
 document.getElementById("Quiz Average").innerHTML = alert_quiz_avg;
+console.log(alert_quiz_avg);
 document.getElementById("Quiz Best").innerHTML = alert_quiz_best;
+console.log(alert_quiz_best);
 document.getElementById("Current Mark in Class").innerHTML = alert_cur_mark;
+console.log(alert_cur_mark);
 document.getElementById("Current Mark in Class2").innerHTML = alert_cur_mark2;
+console.log(alert_cur_mark2);
 }
 </SCRIPT>
 </HEAD>
