@@ -9,6 +9,14 @@
 <meta property="og:url" content="https://ott-tech.github.io/mat1341/" />
 <meta property="og:image" content="http://raw.githubusercontent.com/ott-tech/mat1341/master/docs/favicon.png" />
 <meta property="og:description" content="Summer 2020 MAT1341 Grade Calculator" />
+
+<style>
+body {background-color: #E5E4E2; font-family: Delicious, sans-serif;color: #15317E;}
+p    {font-size: medium;}
+input    {background-color: #E5E4E2;color: #15317E; font-size: medium;}
+</style>
+
+
 <SCRIPT LANGUAGE="JavaScript">
 function testResults (form) {
   var quizMarks = [
@@ -106,12 +114,16 @@ console.log(alert_cur_mark2);
 console.log("###############    End of log    ###############");
 }
 </SCRIPT>
+
+
+
+
 </HEAD>
 <body>
 <div align="middle">
-<h2>MAT1341 Grade Calculator</h2>
+<h1>MAT1341 Grade Calculator</h1>
 <form NAME="myform" ACTION="" METHOD="GET">
-  <table border="1">
+  <table border="10" cellpadding="7">
   <tbody>
   <tr>
   <td>Grade Item</td>
@@ -176,7 +188,7 @@ console.log("###############    End of log    ###############");
   </table>
 
 <br>
-<INPUT TYPE="button" NAME="button" Value="Calculate" onClick="testResults(this.form)">
+<INPUT style="background-color: #D1D0CE;"TYPE="button" NAME="button" Value="Calculate" onClick="testResults(this.form)">
 </form>
 <p>Results will appear here:</p>
 <p id="Quiz Average"></p>
@@ -185,9 +197,8 @@ console.log("###############    End of log    ###############");
 <p id="Current Mark in Class2"></p>
 <br><br>
 
-<p>Clicking the Calculate button will provide you with your average mark for the quizzes, Numbers with Decimal points may show up in red but they do still work.</p>
+<p>Clicking the Calculate button will provide you with your average mark for the quizzes. Your average for the 8 best quizzes. Your current mark in the class, as well as your numeric and letter grade.</p>
 </div>
-
 
 
 </body>
