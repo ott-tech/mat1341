@@ -30,7 +30,7 @@ function testResults (form) {
     parseFloat((form.quiz8.value / 10) * 100),
     parseFloat((form.quiz9.value / 10) * 100),
     parseFloat((form.quiz10.value / 10) * 100)]
-    var finalMark = form.final.value / 100;
+    var finalMark = parseFloat((form.final.value / 50));
 
   var all_quiz_sum = 0;
   for(var i = 0 ; i < quizMarks.length; i++){
@@ -46,7 +46,7 @@ function testResults (form) {
   for(var i = 2 ; i < quizMarks.length; i++){
     best_quiz_sum += quizMarks[i];
   }
-var final_mark_pre = (((best_quiz_sum /100) * 8.75) + finalMark * 30).toFixed(2);
+var final_mark_pre = (((best_quiz_sum /100) * 8.75) + (finalMark * 30)).toFixed(2);
 var final_mark_gpa = null;
 var final_mark_let = null;
 
@@ -182,7 +182,7 @@ console.log("###############    End of log    ###############");
   <tr>
   <td>Final</td>
   <td>  <input type="text" value="0" id="final" name="final"></td>
-  <td>%</td>
+  <td>50</td>
   </tr>
   </tbody>
   </table>
